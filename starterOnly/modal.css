@@ -14,7 +14,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  background-image: url("background.png");
+  /* background-image: url("background.png"); */
   font-family: var(--font-default);
   font-size: 18px;
   max-width: 1300px;
@@ -35,10 +35,10 @@ img {
   margin: 3.5%;
 }
 .header-logo {
-    float: left;
+  float: left;
 }
 .main-navbar {
-    float: right;
+  float: right;
 }
 .topnav a {
   float: left;
@@ -51,56 +51,19 @@ img {
   font-size: 20px;
   font-family: Roboto, sans-serif;
 }
-
 .topnav a:hover {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
 }
-
 .topnav a.active {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
 }
-
 .topnav .icon {
   display: none;
 }
-
-@media screen and (max-width: 768px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-
-
-
- @media screen and (max-width: 540px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-    margin-top: -15px;
-  }
-} 
-
 main {
   font-size: 130%;
   font-weight: bolder;
@@ -111,10 +74,7 @@ main {
   margin: 1px 20px 15px;
   border-radius: 2rem;
   text-align: justify;
-
-
 }
-
 .modal-btn {
   font-size: 145%;
   background: #fe142f;
@@ -169,7 +129,7 @@ main {
   background-color: rgba(26, 39, 156, 0.4);
 }
 
-.content {
+.content { 
   margin: 5% auto;
   width: 100%;
   max-width: 500px;
@@ -181,6 +141,7 @@ main {
   position: relative;
   color: #fff;
   padding-top: 10px;
+  /* min-height: 200px; */
 }
 
 .modal-body {
@@ -208,7 +169,51 @@ input {
   font-size: 20px;
   height: 48px;
 }
-.formData[data-error]::after {
+small {
+  color: #e54858;
+  visibility: hidden ;
+}
+.final{
+  visibility:hidden;
+  
+}
+.finalSuccess{
+  visibility:visible;
+  display:flex;
+  flex-direction: column;
+  margin:50px;
+}
+.finalSuccess p{
+  visibility:visible;
+  /* position: absolute; */
+  width: 309px;
+  height: 153px;
+  left: 566px;
+  top: 423px;
+  font-family: DM Sans;
+  font-size: 36px;
+  /* line-height: 142.6%; */
+  margin:   100px auto 150px auto;
+  /* or 51px */
+  text-align: center;
+  color: #FFFFFF;
+}
+.finalSuccess{
+  visibility:visible;
+  display:flex;
+  flex-direction: column;
+  margin:50px;
+}
+.formData.error small {
+  visibility: visible;
+}
+.formData.error .text-control {
+  border: 2px solid #e54858;
+}
+.formData.success .text-control {
+  border: 2px solid #279e7a;
+}
+/*.formData[data-error]::after {
   content: attr(data-error);
   font-size: 0.4em;
   color: #e54858;
@@ -226,12 +231,12 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
-/* 
 input[data-error]::after {
     content: attr(data-error);
     font-size: 0.4em;
     color: red;
 } */
+
 .checkbox-label,
 .checkbox2-label {
   position: relative;
@@ -239,6 +244,7 @@ input[data-error]::after {
   font-size: 12px;
   font-weight: normal;
 }
+/* Style du contour des  checkbox  */
 .checkbox-label .checkbox-icon,
 .checkbox2-label .checkbox-icon {
   display: block;
@@ -253,6 +259,8 @@ input[data-error]::after {
   top: -1px;
   transition: 0.3s;
 }
+/* Style des checkbox une fois selectionnées*/
+
 .checkbox-label .checkbox-icon::after,
 .checkbox2-label .checkbox-icon::after {
   content: "";
@@ -276,6 +284,7 @@ input[data-error]::after {
 .checkbox-input:checked + .checkbox2-label .checkbox-icon::after {
   opacity: 1;
 }
+/* Style des conditions d'utilisation */
 .checkbox-input:checked + .checkbox2-label .checkbox-icon {
   background: #279e7a;
 }
@@ -304,8 +313,12 @@ input[data-error]::after {
   height: 32px;
   opacity: 1;
   cursor: pointer;
+  
+}
+.close:hover{
   transform: scale(0.7);
 }
+
 .close:before,
 .close:after {
   position: absolute;
@@ -420,7 +433,7 @@ input[data-error]::after {
   color: #fff;
   position: relative;
   text-align: left;
-  min-width: 424px;
+  /*min-width: 424px;*/
 }
 .hero-content::after {
   content: "";
@@ -436,15 +449,16 @@ input[data-error]::after {
   z-index: 1;
 }
 .hero-headline {
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: normal;
   white-space: nowrap;
 }
 .hero-text {
-  width: 146%;
+  /* width: 146%; */
   font-weight: normal;
   margin-top: 57px;
   padding: 0;
+  font-size: 1.5rem;
 }
 .btn-signup {
   outline: none;
@@ -476,17 +490,26 @@ input[data-error]::after {
 footer {
   padding-left: 2vw;
   padding-right: 2vw;
-  margin: 0 20px;
+  /*margin: 0 20px;*/
 }
+/*@media screen and (max-width: 1000px) {
+  .hero-headline {
+    font-size: 4.5rem;
+    white-space: normal;
+  }
+
+}*/
+
 @media screen and (max-width: 800px) {
   .hero-section {
     display: block;
     box-shadow: unset;
+    min-height: 53vh;
   }
   .hero-content {
     background: #fff;
     color: #000;
-    padding: 20px;
+    padding: 0px;
   }
   .hero-content::after {
     content: unset;
@@ -495,7 +518,7 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 4.5rem;
+    font-size: 4rem;
     white-space: normal;
   }
   .hero-text {
@@ -505,6 +528,7 @@ footer {
   .hero-img img {
     border-radius: 10px;
     margin-top: 40px;
+    /*width:100%;*/
   }
   .hero-section > .btn-signup {
     display: block;
@@ -512,12 +536,50 @@ footer {
     padding: 12px 35px;
   }
   .copyrights {
-    margin-top: 50px;
+    margin-top: 0px;
     text-align: center;
   }
 }
+@media screen and (max-width: 800px) {
+  .topnav a {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+    color: red;
+  }
+}
+/*@media screen and (max-width: 768px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}*/
 
-@keyframes modalopen {
+@media screen and (max-width: 540px) {
+  .topnav a {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+    /*margin-top: -15px;*/
+  }
+
+  .copyrights {
+    margin-top: 0;
+  }
+}
+
+/*@keyframes modalopen {
   from {
     opacity: 0;
     transform: translateY(-150px);
@@ -526,4 +588,3 @@ footer {
     opacity: 1;
   }
 }
-
