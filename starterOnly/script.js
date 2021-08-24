@@ -28,16 +28,16 @@ function checkInputs() {
 
   // Vérification de chaque champ
   if (!firstNameValue) {
-    setErrorFor(first, "Veuillez saisir au moins 2 lettres votre prénom ");
-  }
-  // else if (firstNameValue.length > 2) {
-  // setErrorFor(first, "Veuillez saisir au moins 2 lettres pour votre prénom ");
-  // }
-  else {
+    setErrorFor(first, "Veuillez saisir votre prénom ");
+  } else if (firstNameValue.length < 2) {
+    setErrorFor(first, "Veuillez saisir au moins 2 lettres pour votre prénom ");
+  } else {
     setSuccessFor(first);
   }
   if (!lastNameValue) {
-    setErrorFor(last, "Veuillez saisir au moins 2 lettres pour votre nom");
+    setErrorFor(last, "Veuillez saisir votre nom");
+  } else if (lastNameValue.length < 2) {
+    setErrorFor(last, "Veuillez saisir au moins 2 lettres pour votre nom ");
   } else {
     setSuccessFor(last);
   }
@@ -140,6 +140,14 @@ function showFinalMessage() {
 
 // fonction pour fermer le message au clic sur le bouton
 document.getElementById("btn-close").addEventListener("click", function () {
-  const hideModal = document.querySelector(".bground");
-  hideModal.remove();
+  closeModal();
 });
+
+document.querySelector(".close").addEventListener("click", () => {
+  closeModal();
+});
+
+const closeModal = () => {
+  const removeModal = document.querySelector(".bground");
+  removeModal.remove();
+};
