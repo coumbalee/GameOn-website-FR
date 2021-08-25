@@ -4,9 +4,16 @@
     <meta charset="utf-8" />
     <title>Reservation</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="Réservation pour un évênement de gaming avec Game On"> <!-- Meta Description -->
+    <meta
+      name="description"
+      content="Réservation pour un évênement de gaming avec Game On"
+    />
+    <!-- Meta Description -->
     <link rel="stylesheet" href="modal.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=DM+Sans"
       rel="stylesheet"
@@ -15,115 +22,120 @@
   <body>
     <div class="topnav" id="myTopnav">
       <div class="header-logo">
-      <img alt="logo" src="Logo.png" width="auto" height="auto" />
+        <img alt="logo" src="Logo.png" />
+      </div>
+      <div class="main-navbar">
+        <a href="#" class="active"><span>Accueil</span></a>
+        <a href="#"><span>Détails de l'évènement</span></a>
+        <a href="#"><span>À propos</span></a>
+        <a href="#"><span>Contact</span></a>
+        <a href="#"><span>Évènements passés</span></a>
+        <a href="javascript:void(0);" class="icon" onclick="editNav()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
     </div>
-    <div class="main-navbar">
-      <a href="#" class="active"><span>Accueil</span></a>
-      <a href="#"><span>Détails de l'évènement</span></a>
-      <a href="#"><span>À propos</span></a>
-      <a href="#"><span>Contact</span></a>
-      <a href="#"><span>Évènements passés</span></a>
-      <a href="javascript:void(0);" class="icon" onclick="editNav()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
-    </div>
-  </div>
+
     <main>
       <div class="hero-section">
         <div class="hero-content">
           <h1 class="hero-headline">
-            Marathon national<br>
+            Marathon national<br />
             de jeux vidéos
           </h1>
           <p class="hero-text">
-            Vous aimez jouer ? Notre prochain évènement gaming est ouvert
-            aux réservations... Places limitées !
+            Vous aimez jouer ? Notre prochain évènement gaming est ouvert aux
+            réservations... Places limitées !
           </p>
-          <button class="btn-signup modal-btn">
-            je m'inscris
-          </button>
+          <button class="btn-signup modal-btn">je m'inscris</button>
         </div>
         <div class="hero-img">
-          <img src="./bg_img.jpg" alt="img" /> 
+          <img src="./bg_img.jpg" alt="img" />
         </div>
-        <button class="btn-signup modal-btn">
-          je m'inscris
-        </button>
+        <button class="btn-signup modal-btn">je m'inscris</button>
       </div>
 
       <div class="bground">
         <div class="content">
-          <span class="close" ></span>
+          <span class="close"></span>
           <div class="modal-body">
             <!-- Ajout d'un id reserve -->
-            <form
-              name="reserve"
-              id="reserve"
-              action="index.html"
-              method="get"
-            >
-              <div
-                class="formData ">
+            <form name="reserve" id="reserve" action="index.html" method="get">
+              <div class="formData">
                 <!-- Ajout de l' attribut for pour lier le label à l' input-->
-                <label for="first">Prénom</label><br>
+                <label for="first">Prénom</label><br />
                 <input
-                  class="text-control "
+                  class="text-control"
                   type="text"
                   id="first"
                   name="first"
-                  placeholder="John"/> <!-- Ajout d' un placeholder pour l' input prénom --><br>
-                <small> Message d'erreur</small> <!-- Balise small qui contiendra le message en cas d' erreur -->
+                  placeholder="John"
+                />
+                <!-- Ajout d' un placeholder pour l' input prénom --><br />
+                <small> Message d'erreur</small>
+                <!-- Balise small qui contiendra le message en cas d' erreur -->
               </div>
-              <div
-                class="formData ">
+              <div class="formData">
                 <!-- Ajout de l' attribut for pour lier le label à l' input-->
-                <label for="last">Nom</label><br>
+                <label for="last">Nom</label><br />
                 <input
                   class="text-control"
                   type="text"
                   id="last"
                   name="last"
-                  placeholder="Doe"/> <!-- Ajout d' un placeholder pour l' input -->
-                  <br>
-                <small> Message d'erreur</small><!-- Balise small qui contiendra le message en cas d' erreur -->
+                  placeholder="Doe"
+                />
+                <!-- Ajout d' un placeholder pour l' input -->
+                <br />
+                <small> Message d'erreur</small
+                ><!-- Balise small qui contiendra le message en cas d' erreur -->
               </div>
-              <div
-                class="formData">
+              <div class="formData">
                 <!-- Ajout de l' attribut for pour lier le label à l' input-->
-                <label for="email">E-mail</label><br>
+                <label for="email">E-mail</label><br />
                 <input
                   class="text-control"
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="johndoe@gmail.com" 
-                /><br>
-                <small> Message d'erreur</small><!-- Balise small qui contiendra le message en cas d' erreur -->
+                  placeholder="johndoe@gmail.com"
+                /><br />
+                <small> Message d'erreur</small
+                ><!-- Balise small qui contiendra le message en cas d' erreur -->
               </div>
-              <div
-                class="formData">
+              <div class="formData">
                 <!-- Ajout de l' attribut for pour lier le label à l' input-->
-                <label for="birthdate">Date de naissance</label><br>
+                <label for="birthdate">Date de naissance</label><br />
                 <input
                   class="text-control"
                   type="date"
                   id="birthdate"
                   name="birthdate"
-                /><br>
-                <small> Message d'erreur</small><!-- Balise small qui contiendra le message en cas d' erreur -->
+                /><br />
+                <small> Message d'erreur</small
+                ><!-- Balise small qui contiendra le message en cas d' erreur -->
               </div>
-              <div
-                class="formData">
+              <div class="formData">
                 <!-- Ajout de l' attribut for pour lier le label à l' input-->
-                <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                  <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" placeholder="1" />
-                  <br>
-                <small> Message d'erreur</small><!-- Balise small qui contiendra le message en cas d' erreur -->
+                <label for="quantity"
+                  >À combien de tournois GameOn avez-vous déjà participé
+                  ?</label
+                ><br />
+                <input
+                  type="number"
+                  class="text-control"
+                  id="quantity"
+                  name="quantity"
+                  min="0"
+                  max="99"
+                  placeholder="1"
+                />
+                <br />
+                <small> Message d'erreur</small
+                ><!-- Balise small qui contiendra le message en cas d' erreur -->
               </div>
               <p class="text-label">Quelles villes ?</p>
-              <div
-                class="formData">
+              <div class="formData">
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -190,48 +202,48 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
-                <br>
-                <small > Message d'erreur</small><!-- Balise small qui contiendra le message en cas d' erreur -->
+                <br />
+                <small> Message d'erreur</small
+                ><!-- Balise small qui contiendra le message en cas d' erreur -->
               </div>
-              <div
-                class="formData">
+              <div class="formData">
                 <input
-                  class="checkbox-input  conditions "
+                  class="checkbox-input conditions"
                   type="checkbox"
                   id="checkbox1"
                 />
                 <label class="checkbox2-label" for="checkbox1">
                   <span class="checkbox-icon"></span>
-                  J'ai lu et accepté les conditions d'utilisation.
-                </label><br>
-              <small > Message d'erreur</small><!-- Balise small qui contiendra le message en cas d' erreur -->
-
-                <br>
-                <input class="checkbox-input  conditions" type="checkbox" id="checkbox2" />
+                  J'ai lu et accepté les conditions d'utilisation. </label
+                ><br />
+                <small> Message d'erreur</small
+                ><!-- Balise small qui contiendra le message en cas d' erreur -->
+                <br />
+                <input
+                  class="checkbox-input conditions"
+                  type="checkbox"
+                  id="checkbox2"
+                />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
                   <!-- suppression du 'je' qui était en trop -->
-                   Je souhaite être prévenu des prochains évènements.
+                  Je souhaite être prévenu des prochains évènements.
                 </label>
-                <br>
+                <br />
               </div>
-              <input
-                class="btn-submit"
-                type="submit"
-                class="button"
-                value="C'est parti"
-              />
+              <input class="btn-submit" type="submit" value="C'est parti" />
             </form>
             <!-- Création de la div du  message de  succès final avec la classe "final" -->
-            <div class ="final"> 
-              <p>Merci,<br>Votre formulaire à été envoyé avec succès!</p><!-- Message  qui s' affichera en cas d' envoi du formulaire -->
+            <div class="final">
+              <p>Merci,<br />Votre formulaire à été envoyé avec succès!</p>
+              <!-- Message  qui s' affichera en cas d' envoi du formulaire -->
               <!-- Ajout d' un id "btn-close" à l' input -->
-              <input 
-                id="btn-close" 
+              <input
+                id="btn-close"
                 class="btn-submit"
                 type="submit"
-                class="button"
-                value="Fermer "/><!-- Valeur donnée au bouton du message pour fermer le message de succès d' envoi -->
+                value="Fermer "
+              /><!-- Valeur donnée au bouton du message pour fermer le message de succès d' envoi -->
             </div>
           </div>
         </div>
@@ -239,10 +251,12 @@
     </main>
     <footer>
       <p class="copyrights">
-        Copyright 2014 - 2021, GameOn Inc. <!-- Réctification du Copyright en  2021 au lieu de 2020 -->
+        Copyright 2014 - 2021, GameOn Inc.
+        <!-- Réctification du Copyright en  2021 au lieu de 2020 -->
       </p>
     </footer>
-    <script src="script.js"></script> <!-- Ajout d' un fichier js pour séparer mon travail de celui de Jason -->
+    <script src="script.js"></script>
+    <!-- Ajout d' un fichier js pour séparer mon travail de celui de Jason -->
     <script src="modal.js"></script>
   </body>
 </html>
