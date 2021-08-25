@@ -18,7 +18,7 @@ form.addEventListener("submit", (e) => {
   displayModal();
 });
 
-// Fonction qui vérifie que les champs des inputs ne soient pas vides
+// Fonction qui vérifie que les champs des inputs soient valides
 function checkInputs() {
   // trim pour empêcher les espaces blancs inutiles
   const firstNameValue = firstName.value.trim();
@@ -74,6 +74,7 @@ function validateBirthdate() {
 function setErrorFor(input, message) {
   const control = input.parentElement;
   const small = control.querySelector("small");
+  // ajout de la classe "formData error"
   control.className = "formData error";
   small.innerText = message;
   isValid = false;
@@ -81,6 +82,7 @@ function setErrorFor(input, message) {
 // Fonction  qui ajoute la classe de style en cas d'input valide
 function setSuccessFor(input) {
   const control = input.parentElement;
+  // ajout de la classe "formData success"
   control.className = "formData success";
 }
 
@@ -138,16 +140,17 @@ function showFinalMessage() {
   element.className = "finalSuccess";
 }
 
-// fonction pour fermer le message au clic sur le bouton
+// fonction pour fermer le message au clic sur le bouton "fermer"
 document.getElementById("btn-close").addEventListener("click", function () {
   closeModal();
 });
 
-document.querySelector(".close").addEventListener("click", () => {
+//  fermeture du message au clic sur le bouton (x)
+document.querySelector(".close").addEventListener("click", function () {
   closeModal();
 });
 
-const closeModal = () => {
+function closeModal() {
   const removeModal = document.querySelector(".bground");
   removeModal.remove();
-};
+}
