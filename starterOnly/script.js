@@ -1,3 +1,4 @@
+"use strict";
 // Déclaration des variables
 const form = document.getElementById("reserve");
 const firstName = document.getElementById("first");
@@ -28,18 +29,21 @@ function checkInputs() {
 
   // Vérification de chaque champ
   if (!firstNameValue) {
-    setErrorFor(first, "Veuillez saisir votre prénom ");
+    setErrorFor(firstName, "Veuillez saisir votre prénom ");
   } else if (firstNameValue.length < 2) {
-    setErrorFor(first, "Veuillez saisir au moins 2 lettres pour votre prénom ");
+    setErrorFor(
+      firstName,
+      "Veuillez saisir au moins 2 lettres pour votre prénom "
+    );
   } else {
-    setSuccessFor(first);
+    setSuccessFor(firstName);
   }
   if (!lastNameValue) {
-    setErrorFor(last, "Veuillez saisir votre nom");
+    setErrorFor(lastName, "Veuillez saisir votre nom");
   } else if (lastNameValue.length < 2) {
-    setErrorFor(last, "Veuillez saisir au moins 2 lettres pour votre nom ");
+    setErrorFor(lastName, "Veuillez saisir au moins 2 lettres pour votre nom ");
   } else {
-    setSuccessFor(last);
+    setSuccessFor(lastName);
   }
   if (!emailValue) {
     setErrorFor(email, "Veuillez saisir votre email");
